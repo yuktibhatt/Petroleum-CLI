@@ -1,0 +1,26 @@
+{
+  "name": "yipl-intern-petroleum-report",
+  "version": "1.0.0",
+  "description": "Petroleum CLI app ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://yuktibhatt@bitbucket.org/yuktibhatt/yipl-intern-petroleum-report.git"
+  },
+  "author": "Yukti Bhatt",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/yuktibhatt/yipl-intern-petroleum-report#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "commander": "^7.2.0",
+    "dotenv": "^9.0.2",
+    "knex": "^0.95.4",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
