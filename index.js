@@ -68,5 +68,21 @@ cliProgram
 });
 
 
+//view data by overall sale of each product by country
+cliProgram
+.command('view-oil-data-avg-from-database')
+.alias('view-oil-data-avg')
+.option('--tablename <tablename>', 'Name of table in datbaase')
+.description('View all data from the oil service provider')
+// .parse(process.argv)
+.action(async (program) => {
+  const { tablename } = program;
+  const oilData = await oilService.viewOilDataAvg();
+  console.log(oilData);
+  await oilService.viewOilDataAvg(oilData, tablename);
+
+  console.log(`All Data form database - ${tablename}`);
+});
+
 
 cliProgram.parse(process.argv);

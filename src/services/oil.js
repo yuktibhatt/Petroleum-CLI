@@ -39,7 +39,19 @@ static async viewOilData(dataSet, tableName) {
     }
   };
 
-
+//avg sales according to country and petroleum product(iii)
+  static async viewOilDataAvg(dataSet, tableName) {
+    try {
+        const sql = `SELECT AVG(sale),country,petroleum_product FROM reports WHERE sale>0 GROUP BY country, petroleum_product`;      
+      
+        // const sql = `SELECT petroleum_product,avg(sale) FROM reports WHERE sale>0 GROUP BY reports.country`;
+        const oilData = await db.raw(sql);
+        
+        return oilData;
+      } catch (err) {
+        console.log("Error", err);
+      }
+    };
 
 }  
 
