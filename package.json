@@ -4,7 +4,8 @@
   "description": "Petroleum CLI app ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "make:migration": "node node_modules/knex/bin/cli.js migrate:make --knexfile src/knexfile.js",
+    "migrate": "node node_modules/knex/bin/cli.js --knexfile src/knexfile.js migrate:latest"
   },
   "repository": {
     "type": "git",
