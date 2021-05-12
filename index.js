@@ -20,6 +20,7 @@ cliProgram
   }
 });
 
+//store data into a file
 cliProgram
 .command('store-oil-data-to-file')
 .alias('store-oil-data-in-file')
@@ -51,7 +52,7 @@ cliProgram
 });
 
 
-//view data
+//view all data
 cliProgram
 .command('view-oil-data-from-database')
 .alias('view-oil-data')
@@ -68,7 +69,7 @@ cliProgram
 });
 
 
-//view data by overall sale of each product by country
+//view avg sale of each product by country
 cliProgram
 .command('view-oil-data-avg-from-database')
 .alias('view-oil-data-avg')
@@ -83,6 +84,23 @@ cliProgram
 
   console.log(`All Data form database - ${tablename}`);
 });
+
+//view min sale of each product by country
+cliProgram
+.command('view-oil-data-min-from-database')
+.alias('view-oil-data-min')
+.option('--tablename <tablename>', 'Name of table in datbaase')
+.description('View all data from the oil service provider')
+// .parse(process.argv)
+.action(async (program) => {
+  const { tablename } = program;
+  const oilData = await oilService.viewOilDataMin();
+  console.log(oilData);
+  await oilService.viewOilDataMin(oilData, tablename);
+
+  console.log(`All Data form database - ${tablename}`);
+});
+
 
 
 cliProgram.parse(process.argv);

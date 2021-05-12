@@ -53,6 +53,20 @@ static async viewOilData(dataSet, tableName) {
       }
     };
 
+    
+//least sale of each petroleum product (v)
+static async viewOilDataMin(country) {
+  try {
+      const sql = `SELECT year,min(sale),country,petroleum_product FROM reports WHERE sale>0 GROUP BY country,petroleum_product`;
+      const oilData = await db.raw(sql);
+
+      return oilData;
+    } catch (err) {
+      console.log("Error", err);
+    }
+  };
+
+
 }  
 
 
