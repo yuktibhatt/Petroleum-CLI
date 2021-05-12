@@ -51,6 +51,21 @@ cliProgram
 });
 
 
+//view data
+cliProgram
+.command('view-oil-data-from-database')
+.alias('view-oil-data')
+.option('--tablename <tablename>', 'Name of table in datbaase')
+.description('View all data from the oil service provider')
+// .parse(process.argv)
+.action(async (program) => {
+  const { tablename } = program;
+  const oilData = await oilService.viewOilData();
+  console.log(oilData);
+  await oilService.viewOilData(oilData, tablename);
+
+  console.log(`All Data form database - ${tablename}`);
+});
 
 
 

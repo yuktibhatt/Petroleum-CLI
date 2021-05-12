@@ -12,3 +12,4 @@ module.exports = {
   connection,
   client: "sqlite3",
 };
+

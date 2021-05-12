@@ -15,7 +15,7 @@ class OilService {
       dataSet.forEach(async (data,index) => {
         try {
           const { year, petroleum_product, sale, country } = data;
-          const sql = `INSERT INTO reports (id, year, petroleum_product, sale, country) VALUES(${index}, ${year},'${petroleum_product}', ${sale}, '${country}')`;
+          const sql = `INSERT INTO reports(id, year, petroleum_product, sale, country) VALUES(${index}, ${year},'${petroleum_product}', ${sale}, '${country}')`;
           
           await db.raw(sql);
         } catch (err) {
@@ -26,6 +26,18 @@ class OilService {
       console.log("Data stored successfully");
     };
  
+static async viewOilData(dataSet, tableName) {
+  
+    try {
+      
+      const sql = "SELECT * FROM reports";
+      const oilData = await db.raw(sql);
+
+      return oilData;
+    } catch (err) {
+      console.log("Error", err);
+    }
+  };
 
 
 
