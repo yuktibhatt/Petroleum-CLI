@@ -1,9 +1,12 @@
 1. clone the repository
+git clone https://yuktibhatt@bitbucket.org/yuktibhatt/yipl-intern-petroleum-report.git
 2. Install the node modules
 - npm install 
-3. Run the migrations
+3. Install sqlite database
+refer the link for installation "https://www.tutorialspoint.com/sqlite/sqlite_installation.htm"
+4. Run the migrations
 - npm run migrate
-4. Run the following commands 
+5. Run the following commands 
  i. to fetch the data:   node index.js fetch-oil-data
  ii. to store data in a file:   node index.js store-oil-data-in-file --filename data
  iii. to store data in the database:    node index.js store-oil-data --tablename reports
