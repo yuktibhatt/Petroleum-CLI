@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # CLI App with Node JS 
 Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the Chrome V8 engine and executes JavaScript code outside a web browser. 
 
@@ -91,7 +90,3 @@ ___
 
 
 
-=======
-
- 
->>>>>>> 5e0d3b6db86dd3679016cbfc210e16255a8c36ac
