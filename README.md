@@ -48,7 +48,7 @@ sqlite>
 
 ___
 ## Run Migrations
-After installation od database, run the following commands to make migrations
+After installation of database, run the following command to make migrations
 ```shell
 npm run migrate
 ```
