@@ -1,16 +1,16 @@
-1. Install node js (if already installed go to step 2)
+1. Install node js (if already installed go to step 2):
 Headover to the https://nodejs.org/ and download the latest version of the node. Download the LTS version.
 Go through the installation process mentioned there and check the installed version from your terminal by node -v.
-2. Clone the repository
+2. Clone the repository: 
 Open your git bash and clone the repository.
 git clone https://yuktibhatt@bitbucket.org/yuktibhatt/yipl-intern-petroleum-report.git
-3. Install the node modules
+3. Install the node modules:
 - npm install 
-4. Install sqlite database
+4. Install sqlite database:
 Refer the link for installation "https://www.tutorialspoint.com/sqlite/sqlite_installation.htm"
-5. Run the migrations
+5. Run the migrations:
 - npm run migrate
-6. Run the following commands 
+6. Run the following commands in you terminal:  
  i. to fetch the data:   node index.js fetch-oil-data
  ii. to store data in a file:   node index.js store-oil-data-in-file --filename data
  iii. to store data in the database:    node index.js store-oil-data --tablename reports
