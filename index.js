@@ -74,7 +74,7 @@ cliProgram
 .command('view-oil-data-avg-from-database')
 .alias('view-oil-data-avg')
 .option('--tablename <tablename>', 'Name of table in datbaase')
-.description('View all data from the oil service provider')
+.description('View avg data from the oil service provider')
 // .parse(process.argv)
 .action(async (program) => {
   const { tablename } = program;
@@ -90,13 +90,29 @@ cliProgram
 .command('view-oil-data-min-from-database')
 .alias('view-oil-data-min')
 .option('--tablename <tablename>', 'Name of table in datbaase')
-.description('View all data from the oil service provider')
+.description('View min sale year for a product from the oil service provider')
 // .parse(process.argv)
 .action(async (program) => {
   const { tablename } = program;
   const oilData = await oilService.viewOilDataMin();
   console.log(oilData);
   await oilService.viewOilDataMin(oilData, tablename);
+
+  console.log(`All Data form database - ${tablename}`);
+});
+
+//view avg of a product for two years interval(v)
+cliProgram
+.command('view-oil-data-for-two-year-interval')
+.alias('view-oil-data-two')
+.option('--tablename <tablename>', 'Name of table in datbaase')
+.description('View data for two years interval from the oil service provider')
+// .parse(process.argv)
+.action(async (program) => {
+  const { tablename } = program;
+  const oilData = await oilService.viewOilData2();
+  console.log(oilData);
+  await oilService.viewOilData2(oilData, tablename);
 
   console.log(`All Data form database - ${tablename}`);
 });
