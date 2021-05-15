@@ -2,7 +2,7 @@
 Headover to the https://nodejs.org/ and download the latest version of the node. Download the LTS version.
 Go through the installation process mentioned there and check the installed version from your terminal by node -v.
 2. Clone the repository
-Open you git bash and clone the repository.
+Open your git bash and clone the repository.
 git clone https://yuktibhatt@bitbucket.org/yuktibhatt/yipl-intern-petroleum-report.git
 3. Install the node modules
 - npm install 
