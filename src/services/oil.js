@@ -66,17 +66,6 @@ static async viewOilDataMin(country) {
     }
   };
 
-  //view avg of a product for two years interval(v)
-static async viewOilData2(country) {
-  try {
-      const sql = `SELECT DISTINCT year,petroleum_product FROM reports GROUP BY petroleum_product, year`;
-      const oilData = await db.raw(sql);
-
-      return oilData;
-    } catch (err) {
-      console.log("Error", err);
-    }
-  };
 
 
 

@@ -71,22 +71,20 @@ node index.js fetch-oil-data
  ```shell
  node index.js view-oil-data --tablename reports
  ```
- 5. To view avg sale of each product by country: 
+ 5. To view average sale of each product by country: 
 ```shell
 node index.js view-oil-data-avg --tablename reports
 ```
-6. To view year of min sale of each product: 
+6. To view year of minimum sale of each product: 
 ```shell
 node index.js view-oil-data-min --tablename reports
 ```
 
 ___
 
+## Example 
+1. To fetch the year of minimum sale
+![My Website](./img/Capture.PNG) 
 
-
-
-
-<!-- ![My Website](./../../assets/images/boating.jpeg) -->
-
-
+___
 
