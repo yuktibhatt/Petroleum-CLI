@@ -59,18 +59,18 @@ ___
 ```shell
 node index.js fetch-oil-data
 ```
- 2. To Store data in a file:  
+2. To Store data in a file:  
  ```shell 
  node index.js store-oil-data-in-file --filename data
  ```
- 3. To store data in the database:  
-```shell 
- node index.js store-oil-data --tablename reports
- ```
- 4. To View all data:  
- ```shell
- node index.js view-oil-data --tablename reports
- ```
+3. To store data in the database:  
+  ```shell 
+   node index.js store-oil-data --tablename reports
+  ```
+4. To View all data:  
+   ```shell
+    node index.js view-oil-data --tablename reports
+   ```
  5. To view average sale of each product by country: 
 ```shell
 node index.js view-oil-data-avg --tablename reports
